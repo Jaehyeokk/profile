@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/mediascreen.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <script src="./js/main.js"></script>
+  <title>Portfolio</title>
+</head>
+<body>
+  <!-- 스킵메뉴시작 -->
+  <ul id="skip_menu">
+    <li><a href="#header">메뉴바로가기</a></li>
+    <li><a href="#about">본문바로가기</a></li>
+  </ul>
+  <!-- 헤더영역시작 -->
+  <header id="header">
+    <h1 id="logo"><a title="메인페이지바로가기" href="./index.html"><img src="./images/logo.png" alt="포트폴리오로고"></a><span class="hidden">포트폴리오로고</span></h1>
+    <nav class="mainmenu">
+      <h2 class="hidden">메인메뉴</h2>
+      <ul class="mainmenu_list">
+        <li><a title="홈바로가기" href="#;"><i class="far fa-window-maximize"></i></a></li>
+        <li><a title="소개바로가기" href="#;"><i class="far fa-user"></i></a></li>
+        <li><a title="스킬정보바로가기" href="#;"><i class="far fa-sun"></i></a></li>
+        <li><a title="포트폴리오바로가기" href="#;"><i class="fas fa-desktop"></i></a></li>
+        <li><a title="이메일보내기바로가기" href="#;"><i class="far fa-paper-plane"></i></a></li>
+      </ul>
+    </nav>
+    <div class="github_btn"><a title="깃허브바로가기" target="_blank" href="https://github.com/Jaehyeokk"><i class="fab fa-github"></i></a></div>
+  </header>
+  <!-- 비주얼영역시작 -->
+  <section id="visual">
+    <h2 class="hidden">비주얼영역</h2>
+    <img src="./images/visual.png" alt="비주얼이미지">
+    <div class="visual_band">FRONT END<br>WEB PURBLISHER</div>
+    <div class="visual_text">`<span class="fc_black">Hello,<br>&nbsp;I’m</span> ${<span class="fs_64">passionPeople</span>}<br>&nbsp;Web Publisher`</div>
+  </section>
+  <!-- 컨텐츠영역시작 -->
+  <section id="contents">
+  <h2 class="hidden">컨텐츠영역</h2>
+    <!-- ABOUT -->
+    <section id="about">
+      <h3 class="page_title">About</h3>
+      <p class="declare"><span class="red">let</span> passionPeople = {</p>
+      <ul class="obj_list">
+        <li>
+          <p class="obj_title">introduce :</p>
+          <p class="obj_text">‘몇 년 전 조립 PC를 구매하기 위해 하드웨어에 대한 공부를 시작했습니다.<br>공부를 하다 보니 왜 코어 수가 같은데 성능 차이가 나는지, 캐시가 무엇인지 등에 대해 호기심이 생기기 시작했고,<br>더 알고 싶다는 욕심이 생겨 검색을 하고, 커뮤니티를 찾아 질문도 하고,<br>최신 정보를 얻기 위해 잡지를 사 읽는 과정을 통해 결국 PC 정비사 자격증까지 취득하였습니다.<br>이 과정에서 저는 제 자신이 관심이 있고 좋아하는 일이라면 계속해서 적극적으로 발전해나가려 한다는 사실과 성장의 재미를 알게 되었습니다.<br>그리고 현재 저는 어릴 적부터 동경해왔던 컴퓨터를 이용해서 의미 있는 무언가를 구현해내는 일 중 웹 퍼블리셔 과정을 공부하고 있고,<br>공부할수록 더 발전하고 싶다는 열정이 생겨, 교육과정에 안주하지 않고 퍼블리싱 중 발생하는 문제와 이해가 부족한 부분은<br>질문과 검색 그리고 인터넷 강의 등을 찾아 부족한 부분을 채워가고 있습니다.’</p>
+        </li>
+        <li>
+          <p class="obj_title">myself :</p>
+          <p class="obj_text">‘저는 끊임없는 배움을 통한 성장, 새로운 기술에 대한 지속적인 관심,<br>포기하지 않고 도전하는 꾸준함과 끈기, 나아가고자 하는 열정이 있는 김재혁입니다.’</p>
+        </li>
+        <li>
+          <p class="obj_title">education :</p>
+          <p class="obj_text">‘그린아트컴퓨터아카데미 UIUX 웹 퍼블리셔 과정 을 통해 첫 발을 내딛었습니다.'</p>
+        </li>
+        <li>
+          <p class="obj_title">dream :</p>
+          <p class="obj_text">저는 제 적성을 찾았습니다.<br>프론트엔드 엔지니어로서 배울 것이 많다는 점이 저에게 더 큰 열정을 갖게 합니다.<br>제게는 목표가 있습니다. 앞으로 웹 접근성, 웹 표준에 항상 관심을 기울이며,<br>JavaScript를 깊이 이해할 것이고, JavaScript Library(React.js), Framework(vue.js)  등(npm,node.js)을 꾸준히 학습할 것입니다.</p>
+        </li>
+      </ul>
+      <p class="declare_close">};</p>
+    </section>
+    <!-- SKILL -->
+    <section id="skill">
+      <h3 class="page_title">Skill</h3>
+      <div class="dev_lang">
+        <p class="skill_title">&lt;--! 개발 언어 --&gt;</p>
+        <ul class="dev_lang_list">
+          <li>
+            <p class="dev_lang_title"><img src="/images/html.png" alt="에이치티엠엘아이콘"> HTML5</p>
+            <p class="dev_lang_text">- 웹 표준 준수, 표준화된 태그 사용, 불필요한 코드 최소화<br>- 의미 있는(Semantic) 마크업 및 브라우저 최적화<br>- 한국형 웹 접근성 지침(KWCAG 2.1) 준수,<br>- TAP Key로 선택, 이동 가능한 내비게이션, 주요 콘텐츠 등 마크업<br>- 이미지, 링크에 대체 텍스트, 타이틀 제공<br>- 신체적 차이나 장애 여부와 상관없이 누구나 원활하게 페이지를 이용할 수 있도록 마크업<br>- 다른 사람이 코드를 쉽게 이해할 수 있도록 직관적인 클래스명 부여</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/css.png" alt="씨에스에스아이콘"> CSS3</p>
+            <p class="dev_lang_text">- 브라우저 종류, 버전에 따른 꼼꼼한 크로스 브라우징<br>- 효율적인 유지보수를 위한 중복코드 최소화, 일관성 있는 코딩<br>- float, position 속성 적절하게 사용, 반응형을 고려한 컨텐츠 효율적 배치<br>- ::before, ::after 가상요소를 활용, 불필요한 마크업 없이 다양한 효과 구현<br>- transition 속성을 다른 속성,이벤트와 조합, 다양한 사용자 인터렉션 효과 구현<br>- @keyframe 코드 활용, 동적인 애니메이션 모션 제작<br>- @media query 코드 활용, 반응형 레이아웃 하드코딩<br>- Flex, Grid 속성 활용, 반응형 레이아웃 하드코딩 제작</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/javascript.png" alt="자바스크립트아이콘"> JavaScript</p>
+            <p class="dev_lang_text">- DOM(Document Object Model),BOM(Browser Object Model) 이해<br>- ES6(ECMA Script2015) 코어 이해<br>- Vanilla JavaScript 활용, 사용자 인터렉션 하드코딩<br>- Web animation API 활용, 사용자 인터렉션 하드코딩</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/jquery.png" alt="제이쿼리아이콘"> JQuery</p>
+            <p class="dev_lang_text">- DOM(Document Object Model),BOM(Browser Object Model) 이해<br>- DOM과 BOM 활용, Parallax Scroll 효과 웹페이지 하드코딩<br>- JQuery UI 활용, 다양한 사용자 인터렉션 하드코딩<br>- JQuery UI 활용, 2Depth 네비게이션 하드코딩<br>- JQuery UI 활용, 버튼형, 도트형등 다양한 슬라이드 반응형으로 하드코딩</p>
+          </li>
+        </ul>
+      </div>
+      <div class="dev_lang">
+        <p class="skill_title">&lt;--! 개발 도구 --&gt;</p>
+        <ul class="dev_lang_list">
+          <li>
+            <p class="dev_lang_title"><img src="/images/gnuboard.png" alt="그누보드아이콘"> Gnuboard5</p>
+            <p class="dev_lang_text">- 그누보드를 커스텀(Front-end)하여 웹 사이트 구현 가능<br>- 로그인, 회원가입 기능, 최신 게시물 기능 연동 가능<br>- 게시판 생성, 스킨적용, CSS를 활용한 커스터마이징 가능<br>- @Media Query를 활용한 하드코딩으로 반응형 커스터마이징 가능</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/github.png" alt="깃허브아이콘"> Git,Github</p>
+            <p class="dev_lang_text">- stage, commit, pull, push 등 기본적인 명령어와 Flow 이해<br>- 버전관리 및 협업</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/vscode.png" alt="브이에스코드아이콘"> VSCode</p>
+            <p class="dev_lang_text">- 다양한 Extention 활용<br>- Terminal을 이용한 Git 관리</p>
+          </li>
+        </ul>
+      </div>
+      <div class="dev_lang">
+        <p class="skill_title">&lt;--! 디자인 도구 --&gt;</p>
+        <ul class="dev_lang_list">
+          <li>
+            <p class="dev_lang_title"><img src="/images/figma.png" alt="피그마아이콘"> Figma</p>
+            <p class="dev_lang_text">- 웹 사이트 시안 제작/편집 가능<br>- 피그마로 효율적인 협업 가능</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/photoshop.png" alt="포토샵아이콘"> Photoshop</p>
+            <p class="dev_lang_text">- 웹 사이트 시안 제작/편집 가능<br>- 간단한 이미지 편집 가능</p>
+          </li>
+          <li>
+            <p class="dev_lang_title"><img src="/images/illustrator.png" alt="일러스트래이터아이콘"> Illustrator</p>
+            <p class="dev_lang_text">- 간단한 아이콘 및 타이포 디자인 가능</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- WORK -->
+    <section id="work">
+      <div class="center_inner">
+        <h3 class="page_title">Work</h3>
+        <ul class="work_list">
+          <li class="selected"><a href="#;"><img src="./images/work_dodripy.png" alt="두드립와이목업"></a></li>
+          <li><a href="#;"><img src="./images/work_dodripyfree.png" alt="두드립와이프리목업"></a></li>
+          <li><a href="#;"><img src="./images/work_connective.png" alt="커넥티브목업"></a></li>
+          <li><a href="#;"><img src="./images/work_dodripy.png" alt="프로젝트목업"></a></li>
+        </ul>
+      </div>   
+      <div class="active_work">
+
+        <div id="dodripy">
+          <div class="center_inner">
+            <div class="work_img">
+              <img src="./images/work_big_dodripy.png" alt="두드립와이목업">
+            </div>
+            <div class="work_desc">
+              <p class="work_title">DodripY <span class="fw_400">Standard</span> <span class="fs_18">기획, 디자인, 퍼블리싱 100%</span></p>
+              <p class="work_heading">반응형(Responsive Web Design),<br>적응형(Adaptive Web Design),<br>하드코딩(Hard Cording),<br>그누보드5(gnuboard5)</p>
+              <p class="work_text">“부담없이 쉽게 많은 사람들에게 직접 커피를 내리는 경험을 만들어주자" 라는 주제로<br>기획(기획(제안)서, 스토리보드, 와이어프레임)부터 디자인(스타일가이드, 로고 디자인, 시안디자인)<br>그리고 퍼블리싱(하드코딩)을 한 첫 프로젝트입니다.<br>프로젝트를 진행하면서 퍼블리셔의 업무뿐만 아니라 기획 업무와 디자인 업무를 이해하게<br>되었고딩 이 경험이 협업을 하는 과정에서 긍적적인 역할을 할 것입니다.</p>
+              <div class="view_btn"><a href="#;">VIEW SITE</a></div>
+              <div class="view_btn"><a href="#;">VIEW CODE</a></div>
+            </div>
+            <div class="arrow_area">
+              <div class="arrow_bottom"></div>
+            </div>
+          </div>
+          <div class="dodripy_desc">
+            <div class="center_inner">
+              <div class="planning">
+                <p class="view_title">기획</p>
+                <p class="view_subtitle">기획(제안)서</p>
+                <ul class="proposal_list">
+                  <li><a href="#;"><img src="./images/proposal_00.png" alt="기획서"></a></li>
+                  <li><a href="#;"><img src="./images/proposal_01.png" alt="기획서"></a></li>
+                  <li><a href="#;"><img src="./images/proposal_02.png" alt="기획서"></a></li>
+                </ul>
+                <p class="view_subtitle">스토리보드</p>
+                <ul class="proposal_list">
+                  <li><a href="#;"><img src="./images/storyboard_00.png" alt="스토리보드"></a></li>
+                  <li><a href="#;"><img src="./images/storyboard_01.png" alt="스토리보드"></a></li>
+                  <li><a href="#;"><img src="./images/storyboard_02.png" alt="스토리보드"></a></li>
+                </ul>
+                <p class="view_subtitle">와이어프레임</p>
+                <p class="wireframe_img"><a href="#;"><img src="./images/wireframe_00.png" alt="와이어프레임"></a></p>
+              <div class="design">
+                <p class="view_title">디자인</p>
+                <ul class="draft_list">
+                  <li>
+                    <p class="view_subtitle">스타일가이드</p>
+                    <a href="#;"><img src="./images/styleguide.png" alt="스타일가이드"></a>
+                  </li>
+                  <li>
+                    <p class="view_subtitle">PC 시안</p>
+                    <a href="#;"><img src="./images/draft_pc.png" alt="피씨시안"></a>
+                  </li>
+                  <li>
+                    <p class="view_subtitle">모바일 시안</p>
+                    <a href="#;"><img src="./images/draft_mobile.png" alt="모바일시안"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="coding">
+                <p class="view_title">코딩</p>
+                <div class="coding_left">
+                  <p class="view_subtitle">2depth Menu</p>
+                  <p><a href="#;"><img src="./images/co_header.png" alt=""></a></p>
+                  <p class="view_subtitle">Market Slide</p>
+                  <p><a href="#;"><img src="./images/co_market.png" alt=""></a></p>
+                </div>
+                <div class="coding_right">
+                  <p class="view_subtitle">Visual Slide</p>
+                  <p><a href="#;"><img src="./images/co_visual.png" alt=""></a></p>  
+                  <p class="view_subtitle">Recipe Effect</p>
+                  <p><a href="#;"><img src="./images/co_recipe.png" alt=""></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="center_inner">
+        <h3 class="page_title">Contact</h3>
+          <p class="prepare_title">페이지 준비중입니다.</p>
+          <p class="prepare_text">현재 페이지는 E-mail 기능 구현을 위한 준비중에 있습니다.<br>빠른시일 내에 준비하도록 하겠습니다.</p>
+      </div>
+    </section>
+    <!-- contents섹션 -->
+  </section>
+</body>
+</html>

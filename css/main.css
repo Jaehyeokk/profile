@@ -1,0 +1,119 @@
+/* #007BFF */
+
+/* 공통영역시작 */
+.hidden {position:absolute; width:1px; height:1px; font-size:0px; line-height:0px}
+.center_inner {width:1600px; margin:0 auto}
+.page_title {position:relative; left:0; top:0; font:bold 72px "Noto Sans KR"}
+.page_title::after {content:""; position:absolute; right:0; top:50%; width:85%; height:3px; background:#007BFF}
+
+
+/* 스킵메뉴시작 */
+#skip_menu li a {position:absolute; width:1px; height:1px; font-size:0px; line-height:0px}
+#skip_menu li a:focus {z-index:100; width:100%; height:30px; font:normal 14px/30px "Noto Sans KR"; text-align:center; text-decoration:none; color:white; background:#000}
+
+/* 헤더영역시작 */
+#header {z-index:10; position:fixed; left:0; top:0; width:60px; min-height:480px; border-right:solid 1px #eee; background:#fff}
+#logo {position:absolute; left:0; top:10px; width:40px; height:44px; padding:8px 10px}
+#logo a {display:block; width:100%; height:100%}
+#logo a img {width:100%}
+.mainmenu {position:absolute; left:0; top:45%; transform:translateY(-50%); width:60px; height:340px}
+.mainmenu_list {width:100%; height:100%}
+.mainmenu_list li {float:left; width:100%; height:60px; margin-bottom:10px}
+.mainmenu_list li:last-child {margin-bottom:0}
+.mainmenu_list li a {display:block; width:100%; height:100%; font-size:24px; line-height:60px; text-align:center; color:#777; transition:0.3s ease}
+.mainmenu_list li a i {margin:18px auto}
+.mainmenu_list li a:hover {background:#eee}
+.mainmenu_list li a:hover i {color:#007BFF}
+.github_btn {position:absolute; left:0; bottom:10px; width:60px; height:60px}
+.github_btn a {display:block; width:100%; height:100%; font-size:32px; line-height:60px; text-align:center; color:#777}
+.github_btn a i {transition:0.2s ease}
+.github_btn a:hover i {color:#000}
+.active_icon {color:#007BFF}
+
+/* 비주얼영역시작 */
+#visual {float:left; position:relative; left:0; top:0; width:100%; height:940px; margin-bottom:100px}
+#visual img {width:100%}
+.visual_band {position:absolute; right:0; top:50px; width:180px; height:50px; font:normal 18px/21px "Roboto"; transform:rotate(-90deg)}
+.visual_band::after {content:""; position:absolute; left:0; bottom:0; width:100%; height:5px; background:#007BFF}
+.visual_text {position:absolute; left:50%; top:328px; width:644px; height:252px; font:bold 72px/84px "Roboto"; color:#007BFF}
+.fc_black {color:black}
+.fs_64 {font:normal 64px "Roboto"; color:black}
+
+/* 컨텐츠영역시작 */
+#contents {float:left; width:100%; height:2000px}
+/* About */
+#about {width:1600px; height:940px; margin:0 auto}
+.declare {margin-top:100px; font:bold 24px "Roboto"}
+.declare span {color:#C52828}
+.obj_list {float:left; width:1600px; height:550px}
+.obj_list li {float:right; width:1350px; margin:30px 0 10px 0}
+.obj_list li:nth-child(1) {height:200px}
+.obj_list li:nth-child(2) {height:50px}
+.obj_list li:nth-child(3) {height:25px}
+.obj_list li:nth-child(4) {height:100px}
+.obj_title {float:left; width:150px; min-height:25px; font:normal 24px "Roboto"}
+.obj_title:nth-child(1) {height:200px}
+.obj_title:nth-child(2) {height:50px}
+.obj_title:nth-child(3) {height:25px}
+.obj_title:nth-child(4) {height:100px}
+.obj_text {width:1200px; height:200px; font:normal 16px/24px "Noto Sans KR"}
+.declare_close {float:right; width:1375px; font:bold 24px "Roboto"}
+/* Skill */
+#skill {width:1600px; height:1281px; margin:0 auto 120px auto}
+.dev_lang {float:left; width:48%; margin:100px 0 0 20px}
+.dev_lang_list li{margin-top:60px}
+.skill_title {font:bold 24px "Noto Sans KR"; color:#999}
+.dev_lang_title {width:100%; height:30px; margin-bottom:15px; font:500 24px "Roboto"}
+.dev_lang_title img {width:30px; height:30px}
+.dev_lang_text {font:normal 16px "Noto Sans KR"}
+/* Work */
+#work {width:100%; min-height:940px; margin:0 auto}
+.work_list {width:100%; height:252px; margin-top:100px}
+.work_list li {float:left; width:25%; height:100%}
+.work_list li img {width:100%}
+.selected {border:solid 3px #007BFF; box-sizing:border-box}
+
+/* dodripy */
+#dodripy {width:100%; margin-top:80px}
+.work_img {float:left; width:50%; height:500px}
+.work_img img {width:100%}
+.work_desc {float:left; width:50%; height:500px; padding-left:30px; box-sizing:border-box}
+.work_title {font:bold 48px "Noto Sans KR"; margin-bottom:60px}
+.work_heading {font:bold 16px "Noto Sans KR"; margin-bottom:60px}
+.work_text {font:normal 16px "Noto Sans KR"; margin-bottom:50px}
+.view_btn {float:left; width:150px; height:40px; margin-right:10px; border:solid 3px #007BFF}
+.view_btn a {display:block; width:100%; height:100%; font:bold 24px/40px "Roboto"; text-align:center; text-decoration:none; color:black}
+.fw_400 {font-weight:400}
+.fs_18 {font-size:18px}
+.arrow_area {float:left; width:100%; height:56px; margin:120px 0 20px 0}
+.arrow_bottom {width:50px; height:56px; margin:0 auto; background:url(../images/arrow_bottom.png)no-repeat}
+
+.dodripy_desc {float:left; width:100%; margin-bottom:80px; padding-top:80px; background:#E6F5FE}
+
+.planning {float:left; width:100%}
+.view_title {position:relative; left:0; top:0; margin-bottom:80px; font:bold 48px "Noto Sans KR"}
+.view_title::after {content:""; position:absolute; right:0; top:50%; width:90%; height:3px; background:#ccc}
+.view_subtitle {margin-bottom:30px; font:bold 24px "Noto Sans KR"}
+.proposal_list {width:100%; height:282px; margin-bottom:100px}
+.proposal_list li {float:left; width:500px; height:100%; margin-right:50px}
+.proposal_list li:last-child {margin-right:0}
+.proposal_list li img {width:100%}
+.wireframe_img img{width:100%; margin-bottom:100px}
+
+.design {float:left; width:100%}
+.draft_list {width:100%; height:866px; margin-bottom:100px}
+.draft_list li {float:left; margin-right:59px}
+.draft_list li:last-child {margin-right:0}
+
+.coding {float:left; width:100%}
+.coding_left,
+.coding_right {float:left; width:750px}
+.coding_left {margin-right:100px}
+.coding_left img,
+.coding_right img {width:100%; margin-bottom:80px}
+
+/* contact */
+#contact {float:left; width:100%; height:940px}
+#contact h3::after {content:""; position:absolute; right:0; top:50%; width:80%; height:3px; background:#007BFF}
+.prepare_title {width:100%; margin-top:300px; font:normal 60px "Noto Sans KR"; text-align:center; color:#007BFF}
+.prepare_text {font:normal 18px "Noto Sans KR"; text-align:center}
