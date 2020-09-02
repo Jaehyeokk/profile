@@ -20,10 +20,13 @@
 .mainmenu_list {width:100%; height:100%}
 .mainmenu_list li {float:left; width:100%; height:60px; margin-bottom:10px}
 .mainmenu_list li:last-child {margin-bottom:0}
-.mainmenu_list li a {display:block; width:100%; height:100%; font-size:24px; line-height:60px; text-align:center; color:#777; transition:0.3s ease}
+.mainmenu_list li.selected a {color:#007BFF}
+.mainmenu_list li a {display:block; width:100%; height:100%; font-size:24px; line-height:60px; text-align:center; text-decoration:none; color:#777; transition:0.2s ease}
 .mainmenu_list li a i {margin:18px auto}
+.mainmenu_list li a span {display:none; margin:18px auto; font:bold 12px/60px "Roboto"; color:#007BFF}
 .mainmenu_list li a:hover {background:#eee}
-.mainmenu_list li a:hover i {color:#007BFF}
+.mainmenu_list li a:hover i {display:none; color:#007BFF}
+.mainmenu_list li a:hover span {display:inline}
 .github_btn {position:absolute; left:0; bottom:10px; width:60px; height:60px}
 .github_btn a {display:block; width:100%; height:100%; font-size:32px; line-height:60px; text-align:center; color:#777}
 .github_btn a i {transition:0.2s ease}
@@ -67,20 +70,23 @@
 .dev_lang_title img {width:30px; height:30px}
 .dev_lang_text {font:normal 16px "Noto Sans KR"}
 /* Work */
-#work {width:100%; min-height:940px; margin:0 auto}
+#work {width:100%; height:940px; margin:0 auto}
 .work_list {width:100%; height:252px; margin-top:100px}
 .work_list li {float:left; width:25%; height:100%}
 .work_list li img {width:100%}
-.selected {border:solid 3px #007BFF; box-sizing:border-box}
+.work_list li.selected {border:solid 3px #007BFF; box-sizing:border-box}
+.active_work {width:100%; margin-top:80px}
 
 /* dodripy */
-#dodripy {width:100%; margin-top:80px}
+#work_project {width:100%}
 .work_img {float:left; width:50%; height:500px}
 .work_img img {width:100%}
-.work_desc {float:left; width:50%; height:500px; padding-left:30px; box-sizing:border-box}
-.work_title {font:bold 48px "Noto Sans KR"; margin-bottom:60px}
-.work_heading {font:bold 16px "Noto Sans KR"; margin-bottom:60px}
-.work_text {font:normal 16px "Noto Sans KR"; margin-bottom:50px}
+
+.work_desc {float:left; position:relative; left:0; top:0; width:50%; height:500px}
+.work_title {position:absolute; left:30px; top:0; font:bold 48px "Noto Sans KR"}
+.work_heading {position:absolute; left:30px; top:121px; font:bold 16px "Noto Sans KR"}
+.work_text {position:absolute; left:30px; top:250px; font:normal 16px "Noto Sans KR"}
+.work_btn {position:absolute; left:30px; bottom:7px; width:100%; height:40px}
 .view_btn {float:left; width:150px; height:40px; margin-right:10px; border:solid 3px #007BFF}
 .view_btn a {display:block; width:100%; height:100%; font:bold 24px/40px "Roboto"; text-align:center; text-decoration:none; color:black}
 .fw_400 {font-weight:400}
@@ -88,7 +94,7 @@
 .arrow_area {float:left; width:100%; height:56px; margin:120px 0 20px 0}
 .arrow_bottom {width:50px; height:56px; margin:0 auto; background:url(../images/arrow_bottom.png)no-repeat}
 
-.dodripy_desc {float:left; width:100%; margin-bottom:80px; padding-top:80px; background:#E6F5FE}
+.dodripy_desc {float:left; width:100%; height:5414px; padding-top:80px; background:#E6F5FE}
 
 .planning {float:left; width:100%}
 .view_title {position:relative; left:0; top:0; margin-bottom:80px; font:bold 48px "Noto Sans KR"}
@@ -110,10 +116,10 @@
 .coding_right {float:left; width:750px}
 .coding_left {margin-right:100px}
 .coding_left img,
-.coding_right img {width:100%; margin-bottom:80px}
+.coding_right img {width:100%; margin-bottom:60px}
 
 /* contact */
-#contact {float:left; width:100%; height:940px}
+#contact {float:left; width:100%; height:940px; margin-top:120px}
 #contact h3::after {content:""; position:absolute; right:0; top:50%; width:80%; height:3px; background:#007BFF}
 .prepare_title {width:100%; margin-top:300px; font:normal 60px "Noto Sans KR"; text-align:center; color:#007BFF}
 .prepare_text {font:normal 18px "Noto Sans KR"; text-align:center}
