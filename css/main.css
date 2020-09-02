@@ -1,11 +1,9 @@
-/* #007BFF */
-
 /* 공통영역시작 */
+h1,h2,h3,p,div {cursor:default}
 .hidden {position:absolute; width:1px; height:1px; font-size:0px; line-height:0px}
 .center_inner {width:1600px; margin:0 auto}
 .page_title {position:relative; left:0; top:0; font:bold 72px "Noto Sans KR"}
 .page_title::after {content:""; position:absolute; right:0; top:50%; width:85%; height:3px; background:#007BFF}
-
 
 /* 스킵메뉴시작 */
 #skip_menu li a {position:absolute; width:1px; height:1px; font-size:0px; line-height:0px}
@@ -16,12 +14,12 @@
 #logo {position:absolute; left:0; top:10px; width:40px; height:44px; padding:8px 10px}
 #logo a {display:block; width:100%; height:100%}
 #logo a img {width:100%}
-.mainmenu {position:absolute; left:0; top:45%; transform:translateY(-50%); width:60px; height:340px}
+.mainmenu {position:absolute; left:0; top:45%; width:60px; height:340px; -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%)}
 .mainmenu_list {width:100%; height:100%}
 .mainmenu_list li {float:left; width:100%; height:60px; margin-bottom:10px}
 .mainmenu_list li:last-child {margin-bottom:0}
 .mainmenu_list li.selected a {color:#007BFF}
-.mainmenu_list li a {display:block; width:100%; height:100%; font-size:24px; line-height:60px; text-align:center; text-decoration:none; color:#777; transition:0.2s ease}
+.mainmenu_list li a {display:block; width:100%; height:100%; font-size:24px; line-height:60px; text-align:center; text-decoration:none; color:#777; -webkit-transition:0.2s ease; -o-transition:0.2s ease; transition:0.2s ease}
 .mainmenu_list li a i {margin:18px auto}
 .mainmenu_list li a span {display:none; margin:18px auto; font:bold 12px/60px "Roboto"; color:#007BFF}
 .mainmenu_list li a:hover {background:#eee}
@@ -29,14 +27,14 @@
 .mainmenu_list li a:hover span {display:inline}
 .github_btn {position:absolute; left:0; bottom:10px; width:60px; height:60px}
 .github_btn a {display:block; width:100%; height:100%; font-size:32px; line-height:60px; text-align:center; color:#777}
-.github_btn a i {transition:0.2s ease}
+.github_btn a i {-webkit-transition:0.2s ease;-o-transition:0.2s ease;transition:0.2s ease}
 .github_btn a:hover i {color:#000}
 .active_icon {color:#007BFF}
 
 /* 비주얼영역시작 */
 #visual {float:left; position:relative; left:0; top:0; width:100%; height:940px; margin-bottom:100px}
 #visual img {width:100%}
-.visual_band {position:absolute; right:0; top:50px; width:180px; height:50px; font:normal 18px/21px "Roboto"; transform:rotate(-90deg)}
+.visual_band {position:absolute; right:0; top:50px; width:180px; height:50px; font:normal 18px/21px "Roboto"; -webkit-transform:rotate(-90deg); -ms-transform:rotate(-90deg); transform:rotate(-90deg)}
 .visual_band::after {content:""; position:absolute; left:0; bottom:0; width:100%; height:5px; background:#007BFF}
 .visual_text {position:absolute; left:50%; top:328px; width:644px; height:252px; font:bold 72px/84px "Roboto"; color:#007BFF}
 .fc_black {color:black}
@@ -64,17 +62,22 @@
 /* Skill */
 #skill {width:1600px; height:1281px; margin:0 auto 120px auto}
 .dev_lang {float:left; width:48%; margin:100px 0 0 20px}
-.dev_lang_list li{margin-top:60px}
+.dev_lang_list>li{margin-top:60px}
 .skill_title {font:bold 24px "Noto Sans KR"; color:#999}
 .dev_lang_title {width:100%; height:30px; margin-bottom:15px; font:500 24px "Roboto"}
 .dev_lang_title img {width:30px; height:30px}
 .dev_lang_text {font:normal 16px "Noto Sans KR"}
+.dev_text_list {width:100%; margin-left:20px; list-style:disc}
+.dev_text_list li{font:normal 16px "Noto Sans KR"}
 /* Work */
 #work {width:100%; height:940px; margin:0 auto}
 .work_list {width:100%; height:252px; margin-top:100px}
-.work_list li {float:left; width:25%; height:100%}
+.work_list li {float:left; position:relative; left:0; top:0; width:25%; height:100%}
+.work_list li::after {content:""; position:absolute; left:0; top:0;  width:100%; height:100%; background:rgba(0,0,0,.2)}
+.work_list li:hover::after {display:none}
 .work_list li img {width:100%}
-.work_list li.selected {border:solid 3px #007BFF; box-sizing:border-box}
+.work_list li.selected {border:solid 2px #007BFF; -webkit-box-sizing:border-box; box-sizing:border-box}
+.work_list li.selected::after {display:none}
 .active_work {width:100%; margin-top:80px}
 
 /* dodripy */
@@ -123,3 +126,8 @@
 #contact h3::after {content:""; position:absolute; right:0; top:50%; width:80%; height:3px; background:#007BFF}
 .prepare_title {width:100%; margin-top:300px; font:normal 60px "Noto Sans KR"; text-align:center; color:#007BFF}
 .prepare_text {font:normal 18px "Noto Sans KR"; text-align:center}
+
+.pop_up {position:absolute; right:50px; bottom:50px; width:450px; height:250px; background:#007BFF; border-radius:25px;}
+.pop_up p {width:390px; height:216px; margin:17px auto; font:normal 18px "Noto Sans KR"; color:white}
+.pop_up_btn {width:25px; height:25px; position:absolute; right:15px; top:15px}
+.pop_up_btn a {font-size:32px; text-decoration:none; color:white}

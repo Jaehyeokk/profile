@@ -1,8 +1,17 @@
 $(document).ready(function(){
+  popUp();
   headerEffect();
-  visualEffect();
   workEffect();
 })
+function popUp(){
+  var $closeBtn=$('.pop_up_btn');
+
+  $closeBtn.on('click',closePopUp);
+
+  function closePopUp(){
+    $('.pop_up').remove();
+  }
+}
 function headerEffect(){
   var $header=$('#header');
   var $mainMenu=$('.mainmenu_list>li>a')
@@ -44,10 +53,6 @@ function headerEffect(){
     $mainMenu.parent('li').eq(menuIndex).addClass('selected');
   }
 }
-function visualEffect(){
-  var $visualImg=$('#visual>img');
-  $visualImg.css({'height':$(window).innerHeight()})
-}
 function workEffect(){
   var $workList=$('.work_list').children();
   var $activeWorkList=$('.active_work_list').children();
@@ -65,6 +70,6 @@ function workEffect(){
     $workList.removeClass('selected');
     $workList.eq(index).addClass('selected');
     $activeWorkList.css({'display':'none'})    
-    $activeWorkList.eq(index).css({'display':'block'})    
+    $activeWorkList.eq(index).css({'display':'block'})
   }
 }
