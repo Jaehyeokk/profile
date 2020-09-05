@@ -1,16 +1,28 @@
-$(document).ready(function(){
-  popUp();
+$(window).load(function(){
+  resizeEvent();
   headerEffect();
   workEffect();
 })
-function popUp(){
-  var $closeBtn=$('.pop_up_btn');
+function resizeEvent(){
+  // work
+  
+  visualResize();
+  workListResize();
 
-  $closeBtn.on('click',closePopUp);
+  $(window).on('resize',resize);
 
-  function closePopUp(){
-    $('.pop_up').remove();
+  function resize(){
+    visualResize();
+    workListResize();
   }
+
+  function visualResize(){
+    $('#visual').css({'height':$('#visual>img').innerHeight()})
+  }
+  function workListResize(){
+    $('.work_list').css({'height':$('.work_list li img').innerHeight()+3})
+  }
+
 }
 function headerEffect(){
   var $header=$('#header');
@@ -21,7 +33,6 @@ function headerEffect(){
   menuTop[1]=$('#about').offset().top-200;
   menuTop[2]=$('#skill').offset().top-200;
   menuTop[3]=$('#work').offset().top-200;
-  menuTop[4]=$('#contact').offset().top-200;
 
   init();
   initEvent();
@@ -36,7 +47,6 @@ function headerEffect(){
   }
 
   function onScroll(){
-    menuTop[4]=$('#contact').offset().top;
     var scrollTop=$(document).scrollTop();
     if(scrollTop<=menuTop[1]){
       menuIndex=0;
@@ -44,10 +54,8 @@ function headerEffect(){
       menuIndex=1;
     }else if(scrollTop>=menuTop[2] && scrollTop<menuTop[3]){
       menuIndex=2;
-    }else if(scrollTop>=menuTop[3] && scrollTop<menuTop[4]){
+    }else if(scrollTop>=menuTop[3]){
       menuIndex=3;
-    }else if(scrollTop>=menuTop[4]){
-      menuIndex=4;
     }
     $mainMenu.parent('li').removeClass('selected');
     $mainMenu.parent('li').eq(menuIndex).addClass('selected');
