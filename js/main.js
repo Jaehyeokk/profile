@@ -39,7 +39,6 @@ function visualEffect(){
     })
   }
 }
-
 function scrollEvent(){
   // scroll value
   var currentScroll=$(document).scrollTop();
@@ -53,8 +52,26 @@ function scrollEvent(){
   var $mainMenu=$('.main-menu>li>a');
   // visual
   var $scrollDownBtn=$('.scroll-down');
+  // about
+  var $aboutImg=$('.introduce>.img-wrap');
+  var $aboutText=$('.introduce>.text-wrap');
+  // skill
+  var $skillWrap=$('.skill-wrap');
+  // work
+  var $workList=$('.work__list>li');
+  var workLiNum=$workList.size();
 
-  initEvent()
+  init();
+  initEvent();
+
+  function init(){
+    // about
+    $aboutImg.css({'left':-500,'opacity':0})
+    $aboutText.css({'right':-500,'opacity':0})
+    // skill
+    $skillWrap.css({'top':500,'opacity':0})
+    $workList.css({'left':500,'opacity':0})
+  }
 
   function initEvent(){
     $(window).on('scroll',onScroll);
@@ -71,7 +88,7 @@ function scrollEvent(){
 
   function onScroll(){
     newScroll=$(document).scrollTop()
-
+    // header 활성화
     if(newScroll-currentScroll>0 || newScroll<sectionTop[0]-80){
       $('header.on').filter(':not(:animated)').animate({'height':0},500,"easeOutCubic",function(){
         $('header').removeClass('on')
@@ -92,6 +109,19 @@ function scrollEvent(){
       $mainMenu.parent().removeClass('on')
       $mainMenu.parent().eq(2).addClass('on')
     }
+    // about transition
+    if(newScroll>=sectionTop[0]-600 && newScroll<sectionTop[0]){
+      $aboutImg.animate({'left':0,'opacity':1},700,"easeOutCubic");
+      $aboutText.animate({'left':0,'opacity':1},700,"easeOutCubic");
+    }else if(newScroll>=sectionTop[0] && newScroll<sectionTop[1]-600){
+      $skillWrap.animate({'top':0,'opacity':1},700,"easeOutCubic");
+    }else if(newScroll>=sectionTop[1]-600){
+      for(i=0; i<=workLiNum; i++){
+        $workList.eq(i).animate({'left':0,'opacity':1},700+(i*500),"easeOutCubic");
+      }
+    }
     currentScroll=newScroll
   }
+
+
 }

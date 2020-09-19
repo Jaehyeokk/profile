@@ -31,7 +31,7 @@ a {text-decoration:none}
 .float_r {float:right}
 
 .section {position:relative}
-.section .inner {position:relative; max-width:1200px; margin:0 auto; -webkit-box-sizing:border-box; box-sizing:border-box}
+.section .inner {overflow:hidden; position:relative; max-width:1200px; margin:0 auto; -webkit-box-sizing:border-box; box-sizing:border-box}
 
 .page_title {position:relative; padding:80px 0; font:700 60px "Caveat"; text-indent:50px; -webkit-box-sizing:border-box; box-sizing:border-box}
 .page_title::after {content:""; position:absolute; left:0; top:50%; width:10px; height:10px; background:rgba(0,123,255,.75); -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%)}
@@ -71,14 +71,15 @@ header .main-menu li:hover::after {width:80%; background:#333}
 .visual .scroll-down:hover i {color:#111}
 
 /* ABOUT */
-.about .introduce {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between}
-.about .introduce .img-wrap {width:400px; height:500px; background:#eee;}
-.about .img-wrap img {width:100%;}
-.about .introduce .text-wrap {width:750px}
+.about .introduce {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; margin-bottom:80px}
+.about .introduce .img-wrap {position:relative; width:400px; background:#eee; box-shadow:5px 5px 5px rgba(0,0,0,.3)}
+.about .img-wrap img {width:100%}
+.about .introduce .text-wrap {position:relative; width:750px}
 .about .text-wrap .title {margin:20px 0 40px; font:500 36px "Roboto"}
 .about .text-wrap .text {margin-top:20px; font:400 18px "Roboto"}
 
 /* SKILL */
+.skill-wrap {position:relative}
 .skill-wrap::after {content:""; display:block; clear:both}
 .skill-wrap .dev-lang {float:left; width:40%;}
 .skill-wrap .dev-tool {float:right; width:40%;}
@@ -107,7 +108,7 @@ header .main-menu li:hover::after {width:80%; background:#333}
 
 
 /* WORK */
-.work-wrap .work__list li {display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex; margin-bottom:25px; border:1px solid #e5e5e5; border-radius:25px; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2); box-shadow:1px 1px 5px rgba(0,0,0,.2)}
+.work-wrap .work__list li {display:-webkit-inline-box;display:-ms-inline-flexbox; display:inline-flex; position:relative; margin-bottom:25px; border:1px solid #e5e5e5; border-radius:25px; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2); box-shadow:1px 1px 5px rgba(0,0,0,.2)}
 .work-wrap .work__list li img {width:500px; padding:30px; border-radius:50px; -webkit-box-sizing:border-box; box-sizing:border-box}
 .work-wrap .work__list li .info {position:relative; max-width:700px; padding-right:30px}
 .work-wrap .info .title {padding:30px 0 5px; font:700 24px/1.5 "Roboto"}
