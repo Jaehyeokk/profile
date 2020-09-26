@@ -1,3 +1,120 @@
+/* COMMON */
+.hidden {position:absolute; overflow:hidden; width:1px; height:1px; font-size:0px; line-height:0px}
+.clearfix::after {content:""; display:block; clear:both}
+
+.section {position:relative}
+.section .inner {overflow:hidden; position:relative; max-width:1200px; margin:0 auto; -webkit-box-sizing:border-box; box-sizing:border-box}
+
+.page_title {position:relative; padding:80px 0; font:700 60px "Caveat"; text-indent:50px; -webkit-box-sizing:border-box; box-sizing:border-box}
+.page_title::after {content:""; position:absolute; left:0; top:50%; width:10px; height:10px; background:rgba(0,123,255,.75); -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%)}
+
+.btn {display:inline-block; position:relative; padding:2px 18px; border:1px solid #e5e5e5; border-radius:12px; font:400 18px/1.5 "Roboto"; text-decoration:none; color:#333; background:-webkit-gradient(linear,left top, left bottom,from(#fff),to(#eee)); background:-o-linear-gradient(#fff,#eee); background:linear-gradient(#fff,#eee); -webkit-box-sizing:border-box; box-sizing:border-box; cursor:pointer}
+.btn:hover::after {content:""; position:absolute; left:0; top:0; width:100%; height:100%; border-radius:12px; background:rgba(255,255,255,.07)}
+.btn--blue {border-color:#fafafa; color:#fff; background:-webkit-gradient(linear,left top, left bottom,from(rgba(0,123,255,.5)),to(rgba(0,123,255,1))); background:-o-linear-gradient(rgba(0,123,255,.5),rgba(0,123,255,1)); background:linear-gradient(rgba(0,123,255,.5),rgba(0,123,255,1)); -webkit-box-sizing:border-box; box-sizing:border-box}
+
+/* HEADER */
+.header {float:left; z-index:90; width:100%; height:80px}
+.header.on {position:fixed; left:0; top:0; height:0; border-bottom:1px solid #e5e5e5; background:#fafafa; -webkit-box-sizing:border-box; box-sizing:border-box}
+.header .logo {float:left; margin-left:100px; color:#333}
+.header .logo a {display:block; position:relative; width:100%; height:100%; padding:41px 0 12px; font:700 18px/1.5 "Roboto"; color:#333; text-align:center; text-decoration:none; text-transform:uppercase}
+.header .logo a::before {content:""; position:absolute; left:0; top:29px; width:0; height:3px; background:#333; -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease}
+.header .logo a::after {content:""; position:absolute; right:0; bottom:0; width:0; height:3px; background:#333; -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease}
+.header .logo a:hover::before {width:100%}
+.header .logo a:hover::after {width:100%}
+.header .main-menu {float:right; width:350px; margin-right:80px; text-align:right}
+.header .main-menu li {display:inline-block; position:relative}
+.header .main-menu li.on::after {width:80%; background:#333}
+.header .main-menu li a {display:block; padding:41px 20px 12px; font:700 18px/1.5 "Roboto"; text-decoration:none; color:#333; -webkit-box-sizing:border-box; box-sizing:border-box; text-transform:uppercase}
+.header .main-menu li::after {content:""; position:absolute; left:50%; bottom:10px; width:0; height:3px; background:#333; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%); -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease}
+.header .main-menu li:hover::after {width:80%; background:#333}
+
+/* VISUAL */
+.visual {width:100%; height:940px; background:url(../image/visual.jpg)no-repeat 0px 0px/cover}
+.visual::after {content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(255,255,255,.3)}
+.visual .text-wrap {position:absolute; left:50%; top:50%; z-index:10; width:750px; border:10px solid #333; text-align:center; -webkit-box-sizing:border-box; box-sizing:border-box; -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transform:translate(-50%,-50%)}
+.visual .text-wrap .title {position:relative; margin-top:60px; font:700 48px "Roboto","Noto Sans KR"; color:#333}
+.visual .text-wrap .title:nth-child(3) {margin-top:0}
+.visual .text-wrap .title span {position:relative}
+.visual .text-wrap .text {margin:40px 0; font-size:18px; color:#666}
+.visual .scroll-down {position:absolute; left:50%; bottom:10px; z-index:10; width:100px; height:100px; margin-left:-64px; text-align:center; cursor:pointer}
+.visual .scroll-down-img {position:absolute; left:0; top:0; width:100%; height:100%; background:url(../image/scroll_down.png)no-repeat 0px 0px/cover; -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease; -webkit-animation:rotate 15s infinite linear; animation:rotate 15s infinite linear}
+.visual .scroll-down i {font-size:48px; line-height:100px; color:#333; -webkit-transition:0.2s ease; -o-transition:0.2s ease; transition:0.2s ease}
+.visual .scroll-down:hover .scroll-down-img {-webkit-animation-duration:10s;animation-duration:10s}
+.visual .scroll-down:hover i {color:#111}
+
+/* ABOUT */
+.about .introduce {margin-bottom:80px}
+.about .introduce .img-wrap {float:left; position:relative; top:20px; width:400px; background-color:rgba(0,123,255,.1)}
+.about .img-wrap img {position:relative; top:-20px; left:25px; width:100%; -webkit-box-shadow:-5px 5px 5px rgba(0,0,0,.3); box-shadow:-5px 5px 5px rgba(0,0,0,.3)}
+.about .introduce .text-wrap {float:right; position:relative; width:650px; margin-top:30px;}
+.about .text-wrap .title {margin:20px 0 40px; font:500 48px "Roboto"}
+.about .text-wrap .text {margin-top:20px; font:400 18px/1.5 "Roboto","Noto Sans KR"}
+
+/* SKILL */
+.skill .skill_bg {overflow:hidden; position:relative; width:600px; float:left;}
+.skill .skill_bg::after {content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:url(../image/skill_bg.png)no-repeat 0px 0px/cover}
+.skill .skill_bg img {position:relative; top:0; left:0; width:300%; height:814px; opacity:.7; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%)}
+
+.skill .dev {float:right; position:relative; width:600px}
+.skill .dev-list>li {margin-bottom:50px}
+.skill .dev-title-wrap .dev-img {display:inline-block; width:30px; height:30px; background-size:cover; background-repeat:no-repeat}
+.skill .dev-list li:nth-child(1) .dev-img {background-image:url(../image/html.png)}
+.skill .dev-list li:nth-child(2) .dev-img {background-image:url(../image/css.png)}
+.skill .dev-list li:nth-child(3) .dev-img {background-image:url(../image/javascript.png)}
+.skill .dev-list li:nth-child(4) .dev-img {background-image:url(../image/jquery.png)}
+.skill .dev-list li:nth-child(5) .dev-img {background-image:url(../image/gnuboard.png)}
+.skill .dev-title-wrap .dev-title {display:inline-block; height:30px; margin-left:10px; font:500 24px/30px "Roboto"; vertical-align:top}
+.skill .dev-sub-list {padding:10px 0 0 30px; list-style-type:square; -webkit-box-sizing:border-box; box-sizing:border-box}
+.skill .dev-sub-list li {margin-bottom:5px; font:400 16px "Roboto","Noto Sans KR"}
+
+.skill .tool {float:left; width:100%; margin-top:60px}
+.skill .tool_list {text-align:center}
+.skill .tool_list li {display:inline-block; padding:0 20px}
+.skill .tool_list li .tool_img {display:inline-block; width:30px; height:30px; background-size:cover; background-repeat:no-repeat}
+.skill .tool_list li:nth-child(1) .tool_img {background-image:url(../image/vscode.png)}
+.skill .tool_list li:nth-child(2) .tool_img {background-image:url(../image/github.png)}
+.skill .tool_list li:nth-child(3) .tool_img {background-image:url(../image/figma.png)}
+.skill .tool_list li:nth-child(4) .tool_img {background-image:url(../image/photoshop.png)}
+.skill .tool_list li:nth-child(5) .tool_img {background-image:url(../image/illustrator.png)}
+.skill .tool_list li .tool_title {display:inline-block; height:30px; margin-left:5px; font:500 16px/30px "Roboto"; vertical-align:top; color:#333}
+
+/* WORK */
+.work-wrap .work__list li { position:relative; width:100%; margin-bottom:25px; border:1px solid #e5e5e5; border-radius:25px; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2); box-shadow:1px 1px 5px rgba(0,0,0,.2); -webkit-box-sizing:border-box; box-sizing:border-box}
+.work-wrap .work__list li::after {content:""; display:block; clear:both}
+.work-wrap .work__list li img {float:left; width:500px; padding:30px; border-radius:50px; -webkit-box-sizing:border-box; box-sizing:border-box}
+.work-wrap .work__list li .info {float:left; position:relative; max-width:690px; height:355px; padding-right:30px; -webkit-box-sizing:border-box; box-sizing:border-box}
+.work-wrap .info .title {padding:30px 0 5px; font:700 24px/1.5 "Roboto","Noto Sans KR"}
+.work-wrap .info .hashtags {font:400 14px/1.5 "Roboto","Noto Sans KR"; color:#007BFF}
+.work-wrap .info .text {padding-top:5px; font:400 14px/1.5 "Roboto","Noto Sans KR"}
+.work-wrap .info .btns {position:absolute; bottom:0; left:0; padding-bottom:30px}
+.work-wrap .btns .btn:first-child {margin-right:12px}
+
+/* STUDY */
+.learn-wrap {padding-bottom:100px;}
+.learn-wrap .learn__list li {overflow:hidden; float:left; position:relative; width:350px; height:350px; margin:30px 30px 0; border:1px solid #e5e5e5; border-radius:25px; text-align:center; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2); box-shadow:1px 1px 5px rgba(0,0,0,.2); -webkit-box-sizing:border-box; box-sizing:border-box}
+.learn-wrap .learn__list li:last-child {margin-right:0}
+.learn-wrap .learn-wrap__list li img {width:100%}
+.learn-wrap .learn__list .title {padding-top:10px; font:700 18px/1.5 "Roboto","Noto Sans KR"}
+.learn-wrap .learn__list .hashtags {font:400 14px/1.5 "Roboto","Noto Sans KR"; color:#007BFF}
+.learn-wrap .learn__list .btns {position:absolute; left:55%; bottom:0; width:100%; padding-bottom:15px; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%)}
+.learn-wrap .btns .btn:first-child {margin-right:6px}
+
+/* CONTACT */
+.contact {padding-bottom:150px; background:-webkit-gradient(linear,left top, left bottom,from(#fff),to(#fafafa)); background:-o-linear-gradient(#fff,#fafafa); background:linear-gradient(#fff,#fafafa)}
+.contact .text-wrap {width:800px; margin:0 auto; color:#333; text-align:center}
+.contact .text-wrap .title {margin-bottom:80px; font:700 48px "Roboto","Noto Sans KR"}
+.contact .text-wrap .title-text {margin-bottom:50px; font:700 24px "Roboto","Noto Sans KR"}
+.contact .text-wrap .me-list {margin-bottom:80px}
+.contact .text-wrap .me-list li {float:left; width:50%; margin-bottom:30px; font:500 18px "Roboto","Noto Sans KR"; color:#000; text-align:left; list-style:square; list-style-position:inside}
+.contact .text-wrap .me-list li strong {font-weight:700}
+.contact .text-wrap .email {margin-bottom:15px; font:400 36px "Roboto"}
+.contact .text-wrap .email-text {font:400 14px "Roboto","Noto Sans KR"; color:#555}
+
+/* FOOTER */
+footer {background:#333}
+footer .footer--text {padding:30px 0; margin:0 auto; font:normal 14px "Roboto","Noto Sans KR"; color:#ccc; text-align:center}
+
+/* KEY FRAME ANIMATION */
 @-webkit-keyframes rotate {
 	from{
 		-webkit-transform:rotate(0deg);
@@ -20,158 +137,39 @@
 	}
 }
 
-/* COMMON */
-body, html {height:100%}
-a {text-decoration:none}
-.body__container {font:400 16px/1.5 "Roboto"}
-.hidden {position:absolute; overflow:hidden; width:1px; height:1px; font-size:0px; line-height:0px}
-
-.clearfix::after {content:""; display:block; clear:both}
-.float_l {float:left}
-.float_r {float:right}
-
-.section {position:relative}
-.section .inner {overflow:hidden; position:relative; max-width:1200px; margin:0 auto; -webkit-box-sizing:border-box; box-sizing:border-box}
-
-.page_title {position:relative; padding:80px 0; font:700 60px "Caveat"; text-indent:50px; -webkit-box-sizing:border-box; box-sizing:border-box}
-.page_title::after {content:""; position:absolute; left:0; top:50%; width:10px; height:10px; background:rgba(0,123,255,.75); -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%)}
-
-.btn {display:inline-block; position:relative; padding:2px 18px; border:1px solid #e5e5e5; border-radius:12px; font:400 18px/1.5 "Roboto"; color:#333; background:-webkit-gradient(linear,left top, left bottom,from(#fff),to(#eee)); background:-o-linear-gradient(#fff,#eee); background:linear-gradient(#fff,#eee); -webkit-box-sizing:border-box; box-sizing:border-box; cursor:pointer}
-.btn:hover::after {content:""; position:absolute; left:0; top:0; width:100%; height:100%; border-radius:12px; background:rgba(255,255,255,.07)}
-.btn--blue {border-color:#fafafa; color:#fff; background:-webkit-gradient(linear,left top, left bottom,from(rgba(0,123,255,.5)),to(rgba(0,123,255,1))); background:-o-linear-gradient(rgba(0,123,255,.5),rgba(0,123,255,1)); background:linear-gradient(rgba(0,123,255,.5),rgba(0,123,255,1)); -webkit-box-sizing:border-box; box-sizing:border-box}
-
-/* HEADER */
-header {float:left; z-index:90; width:100%; height:80px}
-header.on {position:-webkit-sticky; position:sticky; left:0; top:0; height:0; border-bottom:1px solid #e5e5e5; background:#fafafa; -webkit-box-sizing:border-box; box-sizing:border-box}
-header .logo {margin-left:100px; font:700 18px/1.5 "Roboto"; color:#333}
-header .logo a {display:block; position:relative; width:100%; height:100%; padding:41px 0 12px; font:700 18px/1.5 "Roboto"; color:#333; text-align:center}
-header .logo a::before {content:""; position:absolute; left:0; top:29px; width:0; height:3px; background:#333; -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease}
-header .logo a::after {content:""; position:absolute; right:0; bottom:0; width:0; height:3px; background:#333; -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease}
-header .logo a:hover::before {width:100%}
-header .logo a:hover::after {width:100%}
-header .main-menu {display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; -webkit-box-align:center; -ms-flex-align:center; align-items:center; width:350px; margin-right:80px}
-header .main-menu li {position:relative}
-header .main-menu li.on::after {width:80%; background:#333}
-header .main-menu li a {display:block; padding:41px 20px 12px; font:700 18px/1.5 "Roboto"; color:#333; -webkit-box-sizing:border-box; box-sizing:border-box}
-header .main-menu li::after {content:""; position:absolute; left:50%; bottom:10px; width:0; height:3px; background:#333; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%); -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease}
-header .main-menu li:hover::after {width:80%; background:#333}
-
-/* VISUAL */
-.visual {width:100%; height:940px; background:url(../image/visual00.jpg)fixed;}
-.visual::after {content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(255,255,255,.3)}
-.visual .text-wrap {position:absolute; left:50%; top:50%; z-index:10; width:750px; border:10px solid #333; text-align:center; -webkit-box-sizing:border-box; box-sizing:border-box; -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transform:translate(-50%,-50%)}
-.visual .text-wrap .title {position:relative; margin-top:80px; font-weight:700; font-size:48px; color:#333}
-.visual .text-wrap .title:nth-child(3) {margin-top:0}
-.visual .text-wrap .title span {position:relative}
-.visual .text-wrap .text {margin:40px 0; font-size:18px; color:#666}
-.visual .scroll-down {position:absolute; left:50%; bottom:20px; z-index:10; width:128px; height:126px; margin-left:-64px; text-align:center; cursor:pointer}
-.visual .scroll-down-img {position:absolute; left:0; top:0; width:100%; height:100%; background:url(../image/scroll_down333.png)no-repeat; background-size:cover; -webkit-transition:.2s ease; -o-transition:.2s ease; transition:.2s ease; -webkit-animation:rotate 15s infinite linear; animation:rotate 15s infinite linear}
-.visual .scroll-down i {font-size:60px; line-height:128px; color:#333; -webkit-transition:0.2s ease; -o-transition:0.2s ease; transition:0.2s ease}
-.visual .scroll-down:hover .scroll-down-img {-webkit-animation-duration:10s;animation-duration:10s}
-.visual .scroll-down:hover i {color:#111}
-
-/* ABOUT */
-.about .introduce {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; margin-bottom:80px}
-.about .introduce .img-wrap {position:relative; width:400px; background:#eee; box-shadow:5px 5px 5px rgba(0,0,0,.3)}
-.about .img-wrap img {width:100%}
-.about .introduce .text-wrap {position:relative; width:750px}
-.about .text-wrap .title {margin:20px 0 40px; font:500 36px "Roboto"}
-.about .text-wrap .text {margin-top:20px; font:400 18px "Roboto"}
-
-/* SKILL */
-.skill-wrap {position:relative}
-.skill-wrap::after {content:""; display:block; clear:both}
-.skill-wrap .dev-lang {float:left; width:40%;}
-.skill-wrap .dev-tool {float:right; width:40%;}
-.skill-wrap .design-tool {float:right; width:40%;}
-.skill-wrap .skill-title {margin-bottom:40px; font:700 24px "Roboto"; color:#999}
-
-.skill-list .list-title-wrap::after {content:""; display:block; clear:both;}
-.skill-list li .list-title-img {float:left; width:30px; height:30px; margin-right:10px}
-.skill-list .list-title {margin-bottom:20px; float:left; font:500 24px "Roboto"}
-
-.dev-lang .skill-list li:nth-child(1) .list-title-img {background:url(../image/html.png)no-repeat; background-size:cover;}
-.dev-lang .skill-list li:nth-child(2) .list-title-img {background:url(../image/css.png)no-repeat; background-size:cover;}
-.dev-lang .skill-list li:nth-child(3) .list-title-img {background:url(../image/javascript.png)no-repeat; background-size:cover;}
-.dev-lang .skill-list li:nth-child(4) .list-title-img {background:url(../image/jquery.png)no-repeat; background-size:cover;}
-
-.dev-tool .skill-list li:nth-child(1) .list-title-img {background:url(../image/gnuboard.png)no-repeat; background-size:cover;}
-.dev-tool .skill-list li:nth-child(2) .list-title-img {background:url(../image/github.png)no-repeat; background-size:cover;}
-.dev-tool .skill-list li:nth-child(3) .list-title-img {background:url(../image/vscode.png)no-repeat; background-size:cover;}
-
-.design-tool .skill-list li:nth-child(1) .list-title-img {background:url(../image/figma.png)no-repeat; background-size:cover;}
-.design-tool .skill-list li:nth-child(2) .list-title-img {background:url(../image/photoshop.png)no-repeat; background-size:cover;}
-.design-tool .skill-list li:nth-child(3) .list-title-img {background:url(../image/illustrator.png)no-repeat; background-size:cover;}
-
-.skill-wrap .skill-list .skill-sub-list {margin-bottom:60px}
-.skill-wrap .skill-list .skill-sub-list li {font:500 16px/1.5 "Roboto"; list-style:square; list-style-position:inside}
-
-
-/* WORK */
-.work-wrap .work__list li {display:-webkit-inline-box;display:-ms-inline-flexbox; display:inline-flex; position:relative; margin-bottom:25px; border:1px solid #e5e5e5; border-radius:25px; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2); box-shadow:1px 1px 5px rgba(0,0,0,.2)}
-.work-wrap .work__list li img {width:500px; padding:30px; border-radius:50px; -webkit-box-sizing:border-box; box-sizing:border-box}
-.work-wrap .work__list li .info {position:relative; max-width:700px; padding-right:30px}
-.work-wrap .info .title {padding:30px 0 5px; font:700 24px/1.5 "Roboto"}
-.work-wrap .info .hashtags {font:400 14px/1.5 "Roboto"; color:#007BFF}
-.work-wrap .info .text {padding-top:5px; font:400 14px/1.5 "Roboto"}
-.work-wrap .info .btns {position:absolute; bottom:0; left:0; padding-bottom:30px}
-.work-wrap .btns .btn:first-child {margin-right:12px}
-
-/* STUDY */
-.learn-wrap {padding-bottom:100px;}
-.learn-wrap .learn__list {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; -ms-flex-wrap:wrap; flex-wrap:wrap}
-.learn-wrap .learn__list li {overflow:hidden; position:relative; width:350px; height:350px; margin-top:30px; border:1px solid #e5e5e5; border-radius:25px; text-align:center; -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2); box-shadow:1px 1px 5px rgba(0,0,0,.2)}
-.learn-wrap .learn-wrap__list li img {width:100%}
-.learn-wrap .learn__list .title {padding-top:10px; font:700 18px/1.5 "Roboto"}
-.learn-wrap .learn__list .hashtags {font:400 14px/1.5 "Roboto"; color:#007BFF}
-.learn-wrap .learn__list .btns {position:absolute; left:50%; bottom:0; width:100%; padding-bottom:15px; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%)}
-.learn-wrap .btns .btn:first-child {margin-right:6px}
-
-/* CONTACT */
-.contact {padding-bottom:150px; background:-webkit-gradient(linear,left top, left bottom,from(#fafafa),to(#fff)); background:-o-linear-gradient(#fafafa,#fff); background:linear-gradient(#fafafa,#fff)}
-.contact .text-wrap {width:800px; margin:0 auto; color:#333; text-align:center}
-.contact .text-wrap .title {margin-bottom:80px; font:700 48px "Roboto"}
-.contact .text-wrap .title-text {margin-bottom:50px; font:700 24px "Roboto"}
-.contact .text-wrap .me-list {display:-webkit-box;display:-ms-flexbox;display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; margin-bottom:80px}
-.contact .text-wrap .me-list li {-ms-flex-preferred-size:50%;flex-basis:50%; margin-bottom:30px; font:500 18px "Roboto"; color:#000; text-align:left; list-style:square}
-.contact .text-wrap .me-list li strong {font-weight:700}
-.contact .text-wrap .email {margin-bottom:15px; font:400 36px "Roboto"}
-.contact .text-wrap .email-text {font:400 14px "Roboto"; color:#555}
-
-/* FOOTER */
-footer {background:#333}
-footer .footer--text {padding:30px 0; margin:0 auto; font:normal 14px "Roboto"; color:#ccc; text-align:center}
-
-
-@media screen and (max-width:1200px){
+/* RESPONSIVE MEDIA QUERY */
+@media screen and (max-width:1240px){
   /* Common */
   .section .inner {width:100%; padding:0 30px}
 
   /* About */
   .about .introduce .img-wrap {display:none}
-  .about .introduce .text-wrap {width:700px; margin:0 auto}
+  .about .introduce .text-wrap {float:inherit; max-width:600px; margin:0 auto}
 
   /* Skill */
-  .skill-wrap .dev-lang {float:none; width:700px; margin:0 auto}
-  .skill-wrap .dev-tool {float:none; width:700px; margin:0 auto}
-  .skill-wrap .design-tool {float:none; width:700px; margin:0 auto}
+  .skill .skill_bg {display:none}
+  .skill .dev {float:inherit; margin:0 auto}
 
-  /* Learn */
-  .learn-wrap .learn__list {-ms-flex-pack:distribute;justify-content:space-around}
-}
-
-@media screen and (max-width:980px){
   /* Work */
   .work-wrap .work__list {display:-webkit-box; display:-ms-flexbox; display:flex; -ms-flex-pack:distribute; justify-content:space-around; -ms-flex-wrap:wrap; flex-wrap:wrap; margin:0 auto}
-  .work-wrap .work__list li {display:block; width:350px; height:350px}
-  .work-wrap .work__list li img {width:100%; padding:0; border-radius:25px}
-  .work-wrap .work__list li .info {height:130px; text-align:center; padding-right:0}
+  .work-wrap .work__list li {width:350px; height:350px; margin:20px 20px 20px}
+  .work-wrap .work__list li img {float:inherit; width:100%; padding:0; border-radius:25px}
+  .work-wrap .work__list li .info {float:inherit; max-width:100%; height:130px; text-align:center; padding-right:0}
   .work-wrap .info .title {padding:10px 0 0; font:700 18px/1.5 "Roboto"}
   .work-wrap .info .text {display:none}
   .work-wrap .info .btns {position:absolute; left:50%; bottom:0; width:100%; padding-bottom:15px; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); transform:translateX(-50%)}
   .work .btns .btn:first-child {margin-right:6px}
 
+  /* Learn */
+  .learn-wrap .learn__list {display:-webkit-box;display:-ms-flexbox;display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; -ms-flex-pack:distribute; justify-content:space-around}
+  .learn-wrap .learn__list li {margin:20px 20px 20px}
+}
+
+@media screen and (max-width:980px){
+
+  .skill .tool_list {width:650px; margin:0 auto 30px auto}
+
   /* Contact */
   .contact .text-wrap {width:700px}
-  .contact .text-wrap .title span {display:block}
+  .contact .text-wrap .title {font-size:36px}
 }

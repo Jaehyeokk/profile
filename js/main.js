@@ -45,8 +45,9 @@ function scrollEvent(){
   var newScroll;
   var sectionTop=[];
   sectionTop[0]=$('.about').offset().top;
-  sectionTop[1]=$('.work').offset().top;
+  sectionTop[1]=$('.work-wrap').offset().top;
   sectionTop[2]=$('.contact').offset().top+500;
+  var skillTop=$('.skill').offset().top;
 
   // header
   var $mainMenu=$('.main-menu>li>a');
@@ -56,7 +57,7 @@ function scrollEvent(){
   var $aboutImg=$('.introduce>.img-wrap');
   var $aboutText=$('.introduce>.text-wrap');
   // skill
-  var $skillWrap=$('.skill-wrap');
+  var $skillWrap=$('.skill .dev');
   // work
   var $workList=$('.work__list>li');
   var workLiNum=$workList.size();
@@ -119,6 +120,11 @@ function scrollEvent(){
       for(i=0; i<=workLiNum; i++){
         $workList.eq(i).animate({'left':0,'opacity':1},700+(i*500),"easeOutCubic");
       }
+    }
+    // skill img moving
+    if(newScroll>=skillTop && newScroll<=skillTop+$('.skill .skill_bg').innerHeight()){
+      var $skillImgLeft=$('.skill .skill_bg img').css('left')
+      $('.skill .skill_bg img').css({'left':parseInt($skillImgLeft)-((newScroll-currentScroll)*0.5)})
     }
     currentScroll=newScroll
   }
